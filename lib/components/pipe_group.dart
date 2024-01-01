@@ -36,7 +36,6 @@ class PipeGroup extends PositionComponent with HasGameRef<FlappyBirdGame> {
 
     if (position.x < -34) {
       removeFromParent();
-      print("removed");
     }
   }
 }

@@ -29,4 +29,11 @@ class FlappyBirdGame extends FlameGame with TapDetector, HasCollisionDetection {
     super.update(dt);
     interval.update(dt);
   }
+
+  @override
+  void onTap() {
+    // TODO: implement onTap
+    super.onTap();
+    bird.fly();
+  }
 }
