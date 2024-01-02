@@ -33,12 +33,13 @@ class PipeGroup extends PositionComponent with HasGameRef<FlappyBirdGame> {
   }
 
   @override
-  void update(double dt) {
+  void update(double dt) async {
     super.update(dt);
     position.x -= Config.gameSpeed * dt;
 
     if (position.x < -12) {
       removeFromParent();
+      await FlameAudio.play(Assets.point);
       updateScore();
     }
     if (gameRef.isHit) {
@@ -50,6 +51,5 @@ class PipeGroup extends PositionComponent with HasGameRef<FlappyBirdGame> {
 
   void updateScore() {
     gameRef.bird.score += 1;
-    FlameAudio.play(Assets.point);
   }
 }

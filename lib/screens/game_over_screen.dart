@@ -29,6 +29,7 @@ class GameOverScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: onRestart,
               style: ElevatedButton.styleFrom(
+                shadowColor: Colors.black54,
                 backgroundColor: Colors.orange,
               ),
               child: const Text(

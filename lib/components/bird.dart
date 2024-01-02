@@ -38,6 +38,9 @@ class Bird extends SpriteGroupComponent<BirdMovement>
     super.update(dt);
     // print(position.y);
     position.y += Config.birdVelocity * dt;
+    if (position.y < 1) {
+      gameOver();
+    }
   }
 
   void fly() async {
